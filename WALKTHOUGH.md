@@ -8,9 +8,12 @@ I started this homelab in preparation for an IT intern position, focusing on a s
 * I then configured the DNS server to be authoritative for the domains ad.eliaslab and zone.eliaslab.com. I set up 8.8.8.8 as the forwarder for DNS requests outside of the zone.
 * Finally, I tested connectivity by pinging 8.8.8.8 and searching autozone.com in Microsoft Edge. All systems go!
 
-# Creating Users
+# Creating Users and Organizational Units (OU)
 * I've added four users in the Active Directory Users and Computers snap-in. I will create more users via PowerShell tomorrow and assign OU's and GPO's to each user.
 * Today I've decided to create OU's before using scripting for user creation to ease automation. I first used the command "(Get-ADDomain).DistinguishedName" to fetch the LDAP format of my domain path, to avoid mistakes.
 * I then moved to PowerShell ISE to create my scripts. I'm going to run them in PowerShell by typing ".\script.ps1". This reminds me of compiling C programs and running them from the CLI in a Linux environment. Pretty cool!
 * After creating my first OU script, I moved to the path in PowerShell and ran the script! Time to verify the new OU's exist.
 * It worked, found the corporate parent OU along with each sub OU. I'm now moving each created user from the generic Users folder to the Corporate subOU Users. I will move one using a PowerShell script.
+* Now, I have 4 users, 1 assigned to Admins, and three to Users. I will add more users, workstations and servers at a later date. For now, I'll be moving on to GPO.
+
+# Creating Group Policy Objects (GPO)
