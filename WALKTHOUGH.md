@@ -5,8 +5,12 @@ I started this homelab in preparation for an IT intern position, focusing on a s
 * First, I configured a static IP address for server (192.168.144.10), leaving the netmask default, and set up the DNS server as (127.0.0.1) as it will also serve as the DNS server.
 * Second, I used Server Manager to install AD DS, DHCP, and DNS. Immediately following this, I created a forest (ad.eliaslab) and promoted this server to Domain Controller.
 * I then moved to configure a DHCP scope in the range of 192.168.144.50 to .100, setting the default gateway to 192.168.144.2, and the DNS server to 192.168.144.10.
-* I then configured the DNS server to be authoritative for the domains ad.elias and zone.eliaslab.com. I set up 8.8.8.8 as the forwarder for DNS requests outside of the zone.
+* I then configured the DNS server to be authoritative for the domains ad.eliaslab and zone.eliaslab.com. I set up 8.8.8.8 as the forwarder for DNS requests outside of the zone.
 * Finally, I tested connectivity by pinging 8.8.8.8 and searching autozone.com in Microsoft Edge. All systems go!
 
 # Creating Users
 * I've added four users in the Active Directory Users and Computers snap-in. I will create more users via PowerShell tomorrow and assign OU's and GPO's to each user.
+* Today I've decided to create OU's before using scripting for user creation to ease automation. I first used the command "(Get-ADDomain).DistinguishedName" to fetch the LDAP format of my domain path, to avoid mistakes.
+* I then moved to PowerShell ISE to create my scripts. I'm going to run them in PowerShell by typing ".\script.ps1". This reminds me of compiling C programs and running them from the CLI in a Linux environment. Pretty cool!
+* After creating my first OU script, I moved to the path in PowerShell and ran the script! Time to verify the new OU's exist.
+* It worked, found the corporate parent OU along with each sub OU. I'm now moving each created user from the generic Users folder to the Corporate subOU Users. I will move one using a PowerShell script.
