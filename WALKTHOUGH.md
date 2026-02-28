@@ -17,3 +17,6 @@ I started this homelab in preparation for an IT intern position, focusing on a s
 * Now, I have 4 users, 1 assigned to Admins, and three to Users. I will add more users, workstations and servers at a later date. For now, I'll be moving on to GPO.
 
 # Creating Group Policy Objects (GPO)
+The first three GPOs I will implement are: to restrict control panel access to Corporate Users, map a shared drive, and set password complexity and lockout policy.
+* I've navigated to the Group Policy Management snap-in, followed the forest down to the Users subOU in Corporate. I right-clicked the Users folder and selected 'Create a GPO in this domain, and Link it here'. From what I hear, it's common to create a GPO and forget to link it to an OU, so this is a more efficient choice than going to the Group Policy Objects folder, creating a new GPO, and then manually linking it.
+  
