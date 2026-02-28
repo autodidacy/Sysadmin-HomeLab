@@ -7,3 +7,6 @@ I started this homelab in preparation for an IT intern position, focusing on a s
 * I then moved to configure a DHCP scope in the range of 192.168.144.50 to .100, setting the default gateway to 192.168.144.2, and the DNS server to 192.168.144.10.
 * I then configured the DNS server to be authoritative for the domains ad.elias and zone.eliaslab.com. I set up 8.8.8.8 as the forwarder for DNS requests outside of the zone.
 * Finally, I tested connectivity by pinging 8.8.8.8 and searching autozone.com in Microsoft Edge. All systems go!
+
+# Creating Users
+* I've added four users in the Active Directory Users and Computers applet. I will create more users via PowerShell tomorrow and assign security groups to each user.
