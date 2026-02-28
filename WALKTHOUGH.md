@@ -9,4 +9,4 @@ I started this homelab in preparation for an IT intern position, focusing on a s
 * Finally, I tested connectivity by pinging 8.8.8.8 and searching autozone.com in Microsoft Edge. All systems go!
 
 # Creating Users
-* I've added four users in the Active Directory Users and Computers snap-in. I will create more users via PowerShell tomorrow and assign security groups to each user.
+* I've added four users in the Active Directory Users and Computers snap-in. I will create more users via PowerShell tomorrow and assign OU's and GPO's to each user.
