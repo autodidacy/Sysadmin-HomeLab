@@ -13,6 +13,7 @@ Documentation for my first home lab, simulating an enterprise environment with A
 * When attempting to run script moveUser.ps1, error resulted:
     "Move-ADObject : The operation could not be performed because the object's parent is either uninstantiated or deleted."
   I see the issue now. Simple typo in the definition of $targetOU. I typed elias.lab instead of eliaslab! All clear!
+* When joining a new computer to the domain, I was experiencing an error when attempting to run the join script: "The user's password must be changed before signing in". This is a result of me choosing "User must change password at next logon" during account creation.
    
  
       
