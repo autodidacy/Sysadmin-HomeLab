@@ -13,7 +13,11 @@ Documentation for my first home lab, simulating an enterprise environment with A
 * When attempting to run script moveUser.ps1, error resulted:
     "Move-ADObject : The operation could not be performed because the object's parent is either uninstantiated or deleted."
   I see the issue now. Simple typo in the definition of $targetOU. I typed elias.lab instead of eliaslab! All clear!
-* When joining a new computer to the domain, I was experiencing an error when attempting to run the join script: "The user's password must be changed before signing in". This is a result of me choosing "User must change password at next logon" during account creation.
-   
- 
+* When joining the first Win11 workstation to the domain, I was experiencing an error when attempting to run the join script: "The user's password must be changed before signing in". This is a result of my choosing "User must change password at next logon" during account creation.
+* When joining the first RHEL workstation to the domain, the first attempt failed. I had to change the hostname, add the workstation to the OU, assign a user (kerckel) the necessary permissions to perform the join, and sync the time. After resolving these issues, I successfully joined the workstation to the network.
+
+# Network Map
+
+<img width="799" height="888" alt="image" src="https://github.com/user-attachments/assets/143e99b4-d452-4151-8445-439eafae4287" />
+
       
